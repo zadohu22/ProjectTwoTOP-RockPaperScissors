@@ -7,6 +7,19 @@ body{
     background-color: darkslategray;
 }
 
+.titleText{
+    font-size: 40px;
+    margin-bottom: 100px;
+}
+
+.playAgainHide{
+    display: none;
+}
+
+.playAgainActive{
+    margin-bottom: 50px;
+}
+
 .btnContainer{
     display: flex;
     gap: 20px;
@@ -29,4 +42,27 @@ body{
 .results{
     padding-top: 20px;
     color: white;
+}
+
+.score{
+    margin-top: 30px;
+    padding: 20px 40px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.score h2{
+    text-decoration: underline;
+}
+
+.playerScoreContainer{
+    display: flex;
+    gap: 10px;
+}
+
+.computerScoreContainer{
+    display: flex;
+    gap: 10px;
 }
