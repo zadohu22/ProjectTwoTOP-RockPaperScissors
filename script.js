@@ -12,55 +12,70 @@ function computerPlay(){
     }  
 }
 
+const btnRock = document.getElementById("btnRock");
+const btnPaper = document.getElementById("btnPaper");
+const btnScissors = document.getElementById("btnScissors");
+const resultsDiv = document.getElementById("results");
+
+btnRock.addEventListener("click", playRound);
+btnPaper.addEventListener("click", playRound);
+btnScissors.addEventListener("click", playRound);
+
 function playRound(playerSelection, computerSelection){
-    console.log(playerSelection);
-   
+    
+    
+    playerSelection = this.innerText.toLowerCase();
+    computerSelection = computerPlay();
 
     if(playerSelection === computerSelection){
-        return "It's a tie! You and the Computer picked the same thing."
+        resultsDiv.innerText = "It's a tie! You and the Computer picked the same thing."
     }
 
     if(playerSelection === "paper" && computerSelection === "rock"){
-        return "You win! You selected Paper, Computer selected Rock. Paper covers Rock";
+        resultsDiv.innerText = "You win! You selected Paper, Computer selected Rock. Paper covers Rock";
     }
     else if(playerSelection === "paper" && computerSelection ==="scissors"){
-        return "You lose :( You selected Paper, Computer selected Scissors. Scissors cuts Paper.";
+        resultsDiv.innerText = "You lose :( You selected Paper, Computer selected Scissors. Scissors cuts Paper.";
     }
 
 // *****************************************************************************
     if(playerSelection === "rock" && computerSelection === "scissors"){
-        return "You win! You selected Rock, Computer selected Scissors. Rock smashes Scissors";
+        resultsDiv.innerText = "You win! You selected Rock, Computer selected Scissors. Rock smashes Scissors";
     }
     else if(playerSelection === "rock" && computerSelection ==="paper"){
-        return "You lose :( You selected Rock, Computer selected Paper. Paper covers Rock.";
+        resultsDiv.innerText = "You lose :( You selected Rock, Computer selected Paper. Paper covers Rock.";
     }
 
 // *****************************************************************************
 
     if(playerSelection === "scissors" && computerSelection === "paper"){
-        return "You win! You selected Scissors, Computer selected Paper. Scissors cuts Paper";
+        resultsDiv.innerText = "You win! You selected Scissors, Computer selected Paper. Scissors cuts Paper";
     }
     else if(playerSelection === "scissors" && computerSelection ==="rock"){
-        return "You lose :( You selected Scissors, Computer selected Rock. Rock smashes Scissors";
+        resultsDiv.innerText = "You lose :( You selected Scissors, Computer selected Rock. Rock smashes Scissors";
     }
 
 // *****************************************************************************
 
-     if(playerSelection != "rock" || "paper" || "scissors"){
-        return "You did not type Rock, Paper, or Scissors"
-    }
+    //  if(playerSelection != "rock" || "paper" || "scissors"){
+    //     resultsDiv.innerText = "You did not type Rock, Paper, or Scissors"
+    // }
 }
 
 let gameNumber = 0;
 
-function game(){
-    
-    for (let i = 0; i < 5; i++){
-        const playerSelection = prompt("Type Rock, Paper or Scissors to play").toLowerCase();
-        const computerSelection = computerPlay();
-        gameNumber++;
-        console.log("Game number " + gameNumber + ":" + " " + playRound(playerSelection, computerSelection));
-    }
-}
 
-game(); 
+
+
+
+// function game(){;
+    
+//     for (let i = 0; i < 5; i++){;
+//         const playerSelection = prompt("Type Rock, Paper or Scissors to play").toLowerCase();
+//         const computerSelection = computerPlay();
+//         gameNumber++;
+//         console.log("Game number " + gameNumber + ":" + " " + playRound(playerSelection, computerSelection));
+//     };
+// };
+
+// game(); 

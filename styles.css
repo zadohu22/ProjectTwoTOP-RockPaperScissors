@@ -1,0 +1,32 @@
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: darkslategray;
+}
+
+.btnContainer{
+    display: flex;
+    gap: 20px;
+}
+
+.btn{
+    padding: 3px 10px;
+    background-color: aquamarine;
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 20px;
+    cursor: pointer;
+    transition: all ease-in .2s;
+}
+
+.btn:hover{
+    background-color: darkslategray;
+    color: white;
+}
+
+.results{
+    padding-top: 20px;
+    color: white;
+}
