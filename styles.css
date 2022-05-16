@@ -16,8 +16,10 @@ body{
     display: none;
 }
 
-.playAgainActive{
+.playAgain{
     margin-bottom: 50px;
+    font-size: 20px;
+    padding: 5px 10px;
 }
 
 .btnContainer{
@@ -37,6 +39,10 @@ body{
 .btn:hover{
     background-color: darkslategray;
     color: white;
+}
+
+.btnHide{
+    display: none;
 }
 
 .results{
